@@ -22,7 +22,7 @@ int main() {
     cudaMemcpy(cudaVec, vec0.data(), vec0.size() * sizeof(int), cudaMemcpyHostToDevice);
 
     // Launch the Vector Add CUDA Kernel
-    int threadsPerBlock = 1025;
+    int threadsPerBlock = 1024;
     int blocksPerGrid = (vec0.size() + threadsPerBlock - 1) / threadsPerBlock;
     std::cout << "launching kernel blocksPerGrid " << blocksPerGrid << ", threadsPerBlock " << threadsPerBlock
               << std::endl;
