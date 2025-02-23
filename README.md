@@ -1,4 +1,4 @@
-# gpu_source
+# gpu_сoure
 
 ## Работа с CUDA 
 
