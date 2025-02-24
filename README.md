@@ -1,4 +1,4 @@
-# gpu_сoure
+# Gpu course
 
 ## Работа с CUDA 
 
