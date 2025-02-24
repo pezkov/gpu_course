@@ -19,7 +19,7 @@ int main(){
     cl::Device device;
     for (const auto &platform: platforms){
         std::vector<cl::Device> devices;
-        platform.getDevices(CL_DEVICE_TYPE_GPU, &devices);
+        platform.getDevices(CL_DEVICE_TYPE_CPU, &devices);
         if(!devices.empty()){
             device = devices.front();
             break;
