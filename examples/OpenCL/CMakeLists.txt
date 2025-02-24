@@ -7,4 +7,5 @@ find_package(OpenCL REQUIRED)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC OpenCL)
+target_link_libraries(${PROJECT_NAME} PUBLIC ${OpenCL_LIBRARIES})
+target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCL_INCLUDE_DIRS})

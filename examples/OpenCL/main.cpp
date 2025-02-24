@@ -1,5 +1,9 @@
+#ifdef __unix__
 #include "CL/opencl.hpp"
-
+#endif
+#ifdef _WIN32
+#include "CL/cl.hpp"
+#endif
 #include <iostream>
 #include <vector>
 
@@ -15,7 +19,7 @@ int main(){
     cl::Device device;
     for (const auto &platform: platforms){
         std::vector<cl::Device> devices;
-        platform.getDevices(CL_DEVICE_TYPE_CPU, &devices);
+        platform.getDevices(CL_DEVICE_TYPE_GPU, &devices);
         if(!devices.empty()){
             device = devices.front();
             break;
