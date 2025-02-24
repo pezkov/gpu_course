@@ -1,3 +1,7 @@
 examples/.idea
 examples/cmake-*
 .idea/
+examples/Cuda/.idea
+examples/Cuda/cmake-*
+examples/OpenCL/.idea
+examples/OpenCL/cmake-*
